@@ -1,0 +1,27 @@
+LOGIN URL
+
+<form id="elgg_form-2092767501" method="post" div-class="modal-body" action="http://www.meet.net.np/meet/action/login" class="elgg-form elgg-form-login">
+<input name="__elgg_token" value="b6cb5ffc42fe38a12c3f3eaf7b675732" type="hidden">
+<input name="__elgg_ts" value="1436109307" type="hidden">
+<input value="" name="username" class="elgg-input-text form-control" placeholder="Username" type="text"></div>
+<input value="" name="password" placeholder="Password" class="elgg-input-password form-control" type="password">
+<input name="loginPage" value="true" type="hidden"><div class="form-group">
+<button type="submit" value="<input type=&quot;image&quot; class=&quot;loginbut&quot; id = &quot;loginImage&quot; value=&quot;login&quot; src=http://www.meet.net.np/meet/mod/twitter_bootstrap/_graphics/login-button.png>" class="btn noajaxified">
+<input class="loginbut" id="loginImage" value="login" src="http://www.meet.net.np/meet/mod/twitter_bootstrap/_graphics/login-button.png" type="image"></button>
+
+</form>
+
+
+
+Send sms FORM
+
+<form id="elgg_form" method="post" action="http://www.meet.net.np/meet//mod/sms/actions/send.php" class="elgg-form-sendsms">
+<input class="form-control" placeholder="Enter comma seperated Mobile Numbers." value="" name="recipient" type="text">
+<textarea class="form-control" rows="6" cols="8" onkeypress="return charLimit(this,event)" onkeyup="return characterCount(this)" placeholder="Enter Message." name="message" id="message"></textarea>
+<button name="sendbutton" value="Send Now" class="btn btn-primary" type="submit">Send Now</button>
+<button name="cancelbutton" value="Cancel" class="btn btn-primary" type="submit">Cancel</button>
+</form>
+
+
+curl --request POST 'http://www.meet.net.np/meet/action/login' --data "username=myusername" --data "password=mypassword" --data "loginPage=true" --data "loginbut=login"  -c cookies
+curl --request POST 'http://www.meet.net.np/meet/mod/sms/actions/send.php' --data "recipient=mobnumber" --data "message=jpt test" --data "sendbutton=Send Now" -b cookies -v
