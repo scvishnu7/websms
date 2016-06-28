@@ -1,9 +1,13 @@
 # websms
 Trying to simplify the websms easy to use. curl is used to login and send sms from command line
 
-All you have to do is install the `curl` on your system and then run this script.
+All you have to do is install `curl` on your system and then run this script.
 
-`bash sendsms.sh <username> <recipient> <message body>`
+`./sendsms <username> <password:optional> <recipient> <message body>`
+
+Or install the file into system by issuing
+
+`sudo install sendsms /usr/bin/`
 
 you will be asked the credentials for http://www.meet.net.np/meet. Provide the correct credeintals to send the sms successfully
 
